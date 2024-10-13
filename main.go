@@ -37,7 +37,7 @@ func main() {
     store = sessions.NewCookieStore([]byte(defaultSessionKey))
 
     var err error
-    db, err = sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/godb")
+    db, err = sql.Open("mysql", "sql12737518:xI8TlfbZkK@tcp(sql12.freesqldatabase.com:3306)/sql12737518")
     if err != nil {
         log.Fatal("Failed to connect to database:", err)
     }
