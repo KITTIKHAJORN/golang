@@ -37,8 +37,8 @@ body {
     cursor: pointer;
     background-color: #1df4f8;
     color: #000;
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(29, 244, 248, 0.3);
 }
