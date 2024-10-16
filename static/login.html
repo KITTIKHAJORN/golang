@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Login</title>
+    <title>เข้าสู่ระบบ</title>
 </head>
 
 <body>
     <div class="top-buttons">
-        <button onclick="window.location.href='/login.html'">Login</button>
-        <button onclick="window.location.href='/register.html'">Register</button>
+        <button onclick="window.location.href='/login.html'">เข้าสู่ระบบ</button>
+        <button onclick="window.location.href='/register.html'">ลงทะเบียน</button>
     </div>
     <div class="container">
-        <h1>Login</h1>
+        <h1>เข้าสู่ระบบ</h1>
         <form id="loginForm" action="/login" method="post">
-            <label for="username">Username:</label>
+            <label for="username">ชื่อผู้ใช้:</label>
             <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
+            <label for="password">รหัสผ่าน:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
+            <button type="submit">เข้าสู่ระบบ</button>
         </form>
     </div>
 
@@ -43,7 +43,7 @@
         if (errorMessage) {
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
+                title: "อุ๊บส์...",
                 text: errorMessage,
             });
         }
