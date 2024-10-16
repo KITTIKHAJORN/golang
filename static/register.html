@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark/dark.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Register</title>
+    <title>ลงทะเบียน</title>
 </head>
 <body>
     <div class="top-buttons">
-        <button onclick="window.location.href='/login.html'">Login</button>
-        <button onclick="window.location.href='/register.html'">Register</button>
+        <button onclick="window.location.href='/login.html'">เข้าสู่ระบบ</button>
+        <button onclick="window.location.href='/register.html'">ลงทะเบียน</button>
     </div>
 
     <div class="container">
-        <h1>Register</h1>
+        <h1>ลงทะเบียน</h1>
         <form id="register-form" action="/register" method="POST">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="text" name="full_name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit">Register</button>
+            <input type="text" name="username" placeholder="ชื่อผู้ใช้" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <input type="text" name="full_name" placeholder="ชื่อ-นามสกุล" required>
+            <input type="email" name="email" placeholder="อีเมล" required>
+            <button type="submit">ลงทะเบียน</button>
         </form>
     </div>
 
@@ -40,24 +40,24 @@
                 if (response.ok) {
                     return response.json(); 
                 }
-                throw new Error('Registration failed');
+                throw new Error('การลงทะเบียนล้มเหลว');
             })
             .then(data => {
                 Swal.fire({
-                    title: 'Success!',
-                    text: 'Registration completed successfully!',
+                    title: 'สำเร็จ!',
+                    text: 'การลงทะเบียนเสร็จสมบูรณ์!',
                     icon: 'success',
-                    confirmButtonText: 'OK'
+                    confirmButtonText: 'ตกลง'
                 }).then(() => {
                     window.location.href = '/login.html'; 
                 });
             })
             .catch(error => {
                 Swal.fire({
-                    title: 'Error!',
-                    text: error.message || 'An unexpected error occurred.',
+                    title: 'ข้อผิดพลาด!',
+                    text: error.message || 'เกิดข้อผิดพลาดที่ไม่คาดคิด.',
                     icon: 'error',
-                    confirmButtonText: 'OK'
+                    confirmButtonText: 'ตกลง'
                 });
             });
         };
